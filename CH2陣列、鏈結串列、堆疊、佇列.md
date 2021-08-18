@@ -15,6 +15,7 @@ Def:為節點(node)所構成的有限集合，node包含資料欄位以及指向
 ### 堆疊
 Def:為一有序串列，具有LIFO結構，特點為有一top指向頂端元素
 ![stack](images/2021/08/stack.png)
+
 應用:
 - 遞迴呼叫
 - 後序計算
@@ -25,6 +26,7 @@ Def:為一有序串列，具有LIFO結構，特點為有一top指向頂端元素
 ### 佇列
 Def:為一有序串列，具有FIFO結構，特點為rear端增加元素、front端刪除元素
 ![queue](images/2021/08/queue.png)
+
 應用:
 - OS Scheduleing的ready queue
 - 日常排隊
