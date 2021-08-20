@@ -54,5 +54,34 @@ return i;
 2. 需支援Random Access(Array可以，Linked list不適合)
 
 概念:
-1. F [ i ] == k，return i
-2. F [mid]>
+1. f[mid]==key，return mid
+2. f[mid]>key，找左半邊，upper = mid-1
+3. f[mid]<key，找右半邊，lower = mid+1
+
+遞迴方法
+```C++
+int BS(f[],key,l,u){
+  if(l>u){ //不合理，not found
+    retrun -1;
+  }
+  else{
+    int mid = (l+u)/2;
+    if (f[mid]==key) return mid;
+    else if (f[mid]>key) return BS(f[],key,l,mid-1);
+    else return BS(f[],key,mid+1,u);
+  }
+}
+```
+
+非遞迴方法
+```C++
+int BS(f[],key,l,u){
+  int mid = (l+u)/2;
+  while(l<=u){
+    if(f[mid]==key) return mid;
+    else if (f[mid]>k) u = mid - 1;
+    else l = mid + 1;
+  }
+  retrun -1; //not found
+}
+```

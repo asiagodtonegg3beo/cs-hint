@@ -1,4 +1,4 @@
-# 樹(Tree)
+### 樹(Tree)
 為一個node或多個node構成的集合，有一特定node為root，其餘皆為root之SubTree(子樹)
 
 ### 森林(Forest)
