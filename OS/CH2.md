@@ -32,12 +32,25 @@
 ### I/O架構:
 * 同步I/O(Synchronous):一段時間只有一個I/O request產生
 * 非同步I/O:會有多個I/O request產生，必須使用一個表紀錄各個I/O的位置及狀況
-
+### System Call
+Def：作為執行中user process與kernel之間的溝通介面，user process需要服務時，發出Trap通知OS，代入System Call ID及所需參數，OS會執行對應的System Call，完成後結果回傳結果給process
+(It's a programming "interface" to the services provided by the OS)
+![](assets/markdown-img-paste-20210824213048472.png)
+### System Call 參數傳遞方式
+1. 利用Register保存參數
+* 優點：簡單，存取速度最快
+* 缺點：不適合大量參數的情況
+2. 利用Memory以一個Block/table儲存參數，且將這些參數的起始位置，置於1個Register中，傳給OS
+* 優點：適合大量參數
+* 缺點：存取速度較慢、操作麻煩
+3. 利用Stack將參數push入此Stack，OS再pop Stack以取得參數
+* 優點：適合大量參數，操作簡單
+* Stack空間可能要大些
 ### Dual-Mode
-OS會將重大指令設成特權指令(Priviledge Instruction)，須在Kernel mode執行，以保護重要的資源。
-User mode下可透過System Call請求Kernel mode執行，將結果返回給User
-
-##### 特權指令種類
+* OS會將重大指令設成特權指令(Priviledge Instruction)，須在Kernel mode執行，以保護重要的資源。
+* User mode下可透過System Call請求Kernel mode執行，將結果返回給User
+* user mode下執行特權指令，會發出Trap通知OS，將此Process中止
+### 特權指令種類
 * I/O指令
 * 與記憶體有關的暫存器修改指令
 * Timer有關指令
