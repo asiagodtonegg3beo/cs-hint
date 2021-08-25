@@ -34,13 +34,14 @@ text：常量字元串
 
 ### Context Switch
 讓多個process分享單一CPU資源計算的過程
-當CPU執行context switch到另一個Process，系統會儲存舊的CPU狀態並載入到新的CPU狀態
+當CPU執行context switch到另一個Process，系統會儲存舊的CPU狀態到PCB，並從新的PCB載入新的CPU狀態
 
 交換的時機:
 * 多工
 * 中斷
 * user mode 切換到 Kernel mode (可能)
 
+![](assets/markdown-img-paste-20210825213619416.png)
 ### Process Control Block(PCB)
 OS kernel中的一種資料結構，切換Process時會把未做完的process資訊記錄在PCB裡
 主要內容：
@@ -51,7 +52,7 @@ OS kernel中的一種資料結構，切換Process時會把未做完的process資
 5. CPU Scheduling info：ex:process優先度、到達時間、CPU time quantum
 6. Memory management info：記憶體管理資訊 ex:Base/limit register、page table、segment table
 7. Accounting info：process使用多少資源、使用多少CPU time
-8. I/O status info：process發出多
+8. I/O status info：process發出多少I/O request，完成狀況如何，目前暫用哪些CPU資源
 ![](assets/markdown-img-paste-20210823145140767.png)
 ### CPU排程
 ##### 1. Long Term Sheduler(Job Sheduler)：new->ready
@@ -70,9 +71,17 @@ OS kernel中的一種資料結構，切換Process時會把未做完的process資
 * 減少Multiprogramming Degree
 * 可調和I/O Bound與CPU Bound混合比例
 
-
 ### I/O bound 與 CPU bound
 * I/O bound process：花在I/O的時間多於計算，許多短暫的CPU-burst(使用CPU的時間)
 ex：等待鍵盤輸入的程式
 * CPU-bound process：花更多的時間做計算，很少有很長的CPU-burst
 ex：壓縮程式
+
+分派器（Dispatcher）
+Def：將CPU控制權授予CPU Sheduler選出的Process
+主要工作:
+1. Context switch
+2. kernel mode -> user mode
+3. jump至選出的proesss執行區段
+
+分派延遲(Dispatch latency)為工作時間總合
