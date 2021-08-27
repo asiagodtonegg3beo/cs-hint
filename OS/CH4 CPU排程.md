@@ -8,3 +8,5 @@ CPU Sheduling從ready queue挑選process進入CPU執行，CPU sheduling選擇的
 * running -> ready (interrupt) e.g.time Sharing因為time-out回到ready
 * waiting -> ready (i/o complete)
 * terminated
+
+1.preemptive可搶先核心

@@ -9,7 +9,8 @@ Def:為節點(node)所構成的有限集合，node包含資料欄位以及指向
 ![linked list ](images/2021/08/linked-list.png)
 
 ### 兩者比較
-
+陣列:彈性差、省空間、可支援隨機存取
+鏈結串列:彈性佳、耗空間、只支援循序存取
 ![array vs linked list](images/2021/08/array-vs-linked-list.png)
 
 ### 堆疊

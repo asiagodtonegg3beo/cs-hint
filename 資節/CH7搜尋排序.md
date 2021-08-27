@@ -144,3 +144,68 @@ int IPS(d[],k,l,u){
     return -1; //not found
 }
 ```
+### 初等排序
+### Insertion sort
+將第i筆資料插入到n-1已排好的串列中，使之成為第i筆已排好的串列
+![](assets/markdown-img-paste-20210827140354102.png)
+```C++
+void insertion_sort(data,n){
+  int key,i,j;
+  for (i=1;i<n;i++){ //做n-1回合
+    key=data[i];
+    j = i-1;
+    while(data[j]>key){//將第j筆資料插入前j-1筆已排好序的資料中
+      data[j+1]=data[j];
+      j--;
+    }
+    data[j+1]=key;
+  }
+}
+```
+* Best case:O(n)
+* Worst case:O(n^2)
+* avg case:O(n^2)
+* space O(1)
+
+選擇排序 Selection Sort
+從i~n筆資料中挑選最小值，與第i筆資料做swap，反覆做n-1回合
+```C++
+void Selection_sort(data,n){
+int i,j,min;
+  for (i=0;i<n-1;i++){
+  min = i;
+      for(j=i+1;j<n;j++){
+          if(data[min]>data[j]){
+          min = j;
+      }
+      if (i!=min){
+          swap(data[i],data[min]);
+      }
+    }
+  }
+}
+```
+* Best case: O(n^2)
+* Worst case: O(n^2)
+* avg case: O(n^2)
+* Space :O(1)
+
+氣泡排序 Bubble sort
+元素兩兩互相比較，若前者>後者則swap，做n-1回合
+```C++
+void Bubble_sort(data,n){
+  int i,j;
+  for(i=1;i<n-1;i++){
+    for(j=i+1;j<n;j++){
+      if(data[i]>data[j])
+        swap(data[i],data[j]);
+    }
+  }
+}
+```
+* Best case:O(n)
+* Worst case:O(n^2)
+* avg case:O(n^2)
+* Space:O(1)
+### 高等排序
+### 快速排序 Quicksort
