@@ -14,7 +14,8 @@ Def:為節點(node)所構成的有限集合，node包含資料欄位以及指向
 ![array vs linked list](images/2021/08/array-vs-linked-list.png)
 
 ### 堆疊
-Def:為一有序串列，具有LIFO結構，特點為有一top指向頂端元素
+Def:具有LIFO結構的有序串列集合，特點為有一top指向元素的頂端
+
 ![stack](images/2021/08/stack.png)
 
 應用:
@@ -25,7 +26,7 @@ Def:為一有序串列，具有LIFO結構，特點為有一top指向頂端元素
 - 老鼠走迷宮
 
 ### 佇列
-Def:為一有序串列，具有FIFO結構，特點為rear端增加元素、front端刪除元素
+Def:具有FIFO結構有序串列集合，特點為rear端增加元素、front端刪除元素
 ![queue](images/2021/08/queue.png)
 
 應用:
@@ -34,6 +35,6 @@ Def:為一有序串列，具有FIFO結構，特點為rear端增加元素、front
 - 模擬(simulation)效能評估
 - Binary Tree的層序追蹤(Level Order Traversal)
 - I/O device 使用 queue 接收 I/O request
-- I/O buffer 常用queue
+- I/O buffer 常用 queue
 - BFS、DFS
 - Priority queue
