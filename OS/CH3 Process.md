@@ -77,7 +77,7 @@ ex：等待鍵盤輸入的程式
 * CPU-bound process：花更多的時間做計算，很少有很長的CPU-burst
 ex：壓縮程式
 
-分派器（Dispatcher）
+### 分派器（Dispatcher）
 Def：將CPU控制權授予CPU Sheduler選出的Process
 主要工作:
 1. Context switch
