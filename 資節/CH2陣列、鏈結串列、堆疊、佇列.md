@@ -3,6 +3,7 @@ CH2
 ### 陣列(Array)
 Def:是用來表示有序串列(Order list)的一種資料結構，為一連續的記憶體
 ![array](images/2021/08/array.png)
+
 ### 鏈結串列(Linked list)
 Def:為節點(node)所構成的有限集合，node包含資料欄位以及指向下一node的指標
 
@@ -38,3 +39,11 @@ Def:具有FIFO結構有序串列集合，特點為rear端增加元素、front端
 - I/O buffer 常用 queue
 - BFS、DFS
 - Priority queue
+
+### Circular Linked List 環狀鏈結串列
+指最後一個節點會指向第一個節點形成環狀鏈結串列
+* 任一節點皆可拜訪所有節點一次
+* 串列回收容易(O(1))
+
+### Double Linked List 雙向鏈結串列
+每個節點中有兩個指標，指向前一個及後一個節點

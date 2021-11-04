@@ -65,6 +65,15 @@ Def：透過迴圈控制相關敘述(for、while、until、repeat...until)達到
 優點：如果Process卡在迴圈的時間很短，則Spinlock十分有利
 缺點：如果Process長時間才能脫離迴圈，非常浪費CPU time
 
+### Mutex
+thread進入後上鎖，必須等到進入的process解鎖後才能進入C.S.
+
+### Semaphore
+可讓多個thread進入，訊號標S保持在0~MAX之間
+* S為負值時，行程會被擋住；S不為負值，thread可進入C.S.
+* P（wait()），S--
+* V（signal()），S++
+
 ### non-busy-waiting
 將process暫停並將狀態設為Block state，直到同步事件發生使用wakeup(process)的system call將Block state切成Ready State
 
