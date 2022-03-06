@@ -4,6 +4,7 @@
 upper bound of f(n)，有一個函數g(n)=O(f(n))，存在正實數c,no，使得g(n)<=c*f(n)，for all n>=no
 
 ***
+
 (a.)
 
 ![](assets/markdown-img-paste-20220306185410687.png)
@@ -13,6 +14,7 @@ upper bound of f(n)，有一個函數g(n)=O(f(n))，存在正實數c,no，使得
 
 ![](assets/markdown-img-paste-20220306185644181.png)
 ***
+
 (c.)
 
 ![](assets/markdown-img-paste-20220306190107227.png)
