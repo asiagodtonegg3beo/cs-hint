@@ -1,0 +1,18 @@
+sudo apt-get update && sudo apt-get upgrade
+
+sudo apt-get install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+
+systemctl set-default graphical.target
+
+sudo passwd root
+
+sudo apt install xrdp
+
+sudo systemctl enable xrdp
+
+### 設定時區
+sudo dpkg-reconfigure tzdata
+### 設定語系
+sudo dpkg-reconfigure locales
+
+sudo apt install rclone

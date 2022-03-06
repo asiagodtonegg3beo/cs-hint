@@ -42,3 +42,50 @@
 - Retrun Address(返回地址)
 
 存在 stack 中，以利後續回到原程式中
+
+### 常見遞迴程式
+
+#####階層
+![](assets/markdown-img-paste-20220221224420928.png)
+```C
+int f (int n){
+  if (n==1)
+  return 1;
+  else
+  return n * f(n-1);
+}
+```
+
+#####1+2+...+n
+![](assets/markdown-img-paste-2022022123083527.png)
+```C
+int f (int n){
+  if(n==0)
+  return 0;
+  else
+  return n+f(n-1);
+}
+```
+
+#####費式數列
+![](assets/markdown-img-paste-20220221231210212.png)
+```C
+//遞迴
+int f(int n){
+    if(n==0)
+      return 0;
+    else if(n==1)
+      return 1;
+    else
+      return f(n-1)+f(n-2);
+}
+//非遞迴
+int f(int n){
+  f[0]=0;
+  f[1]=1;
+  for(int i=2;i<n;i++)
+    f[i]=f[i-1]+f[i-2];
+
+  return
+}
+```
