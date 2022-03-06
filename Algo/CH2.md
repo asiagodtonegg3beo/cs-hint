@@ -5,17 +5,17 @@ upper bound of f(n)，有一個函數g(n)=O(f(n))，存在正實數c,no，使得
 
 ***
 
-(a.)
+### (a.)
 
 ![](assets/markdown-img-paste-20220306185410687.png)
 ***
 
-(b.)
+### (b.)
 
 ![](assets/markdown-img-paste-20220306185644181.png)
 ***
 
-(c.)
+### (c.)
 
 ![](assets/markdown-img-paste-20220306190107227.png)
 
