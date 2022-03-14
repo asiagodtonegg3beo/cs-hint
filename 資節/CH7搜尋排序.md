@@ -150,16 +150,15 @@ int IPS(d[],k,l,u){
 ![](assets/markdown-img-paste-20210827140354102.png)
 ```C++
 void insertion_sort(data,n){
-  int key,i,j;
-  for (i=1;i<n;i++){ //做n-1回合
-    key=data[i];
-    j = i-1;
-    while(data[j]>key){//將第j筆資料插入前j-1筆已排好序的資料中
-      data[j+1]=data[j];
-      j--;
-    }
+  for(int i = 0 ;i < n;i++){
+    int key = data[i];
+    int j = i-1;
+      while(j>0 && data[j]>key){
+        data[j+1]=data[j];
+        j--;
+      }
     data[j+1]=key;
-  }
+   }
 }
 ```
 * Best case:O(n)
