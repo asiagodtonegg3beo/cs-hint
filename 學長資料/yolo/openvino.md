@@ -64,7 +64,7 @@ wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optim
 ```
 
 4. 轉換yolov4.weights -> .pb
-![螢幕擷取畫面 2022-03-23 215505](/assets/螢幕擷取畫面%202022-03-23%20215505_56jlagaiw.png)
+![](/assets/螢幕擷取畫面%202022-03-23%20215505_56jlagaiw.png)
 
 5. .pb轉換成供OpenVINO使用的.bin .xml檔
 (其中有提到如果要轉換成YOLO V4的權重文件，只能用>=openVino2021.3以上版本)
@@ -73,12 +73,12 @@ wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optim
 python convert_weights_pb.py --class_names cfg/coco.names --weights_file yolov4.weights --data_format NHWC
 ```
 
-![螢幕擷取畫面 2022-03-23 215744](/assets/螢幕擷取畫面%202022-03-23%20215744.png)
+![](/assets/螢幕擷取畫面%202022-03-23%20215744.png)
 ```bash
 python "C:\Program Files (x86)\Intel\openvino_2021.4.582\deployment_tools\model_optimizer\mo.py" --input_model frozen_darknet_yolov4_model.pb --transformations_config yolov4.json --batch 1 --reverse_input_channels
 ```
-![螢幕擷取畫面 2022-03-23 222605](/assets/螢幕擷取畫面%202022-03-23%20222605_s70w3d6hc.png)
-![螢幕擷取畫面 2022-03-23 222816](/assets/螢幕擷取畫面%202022-03-23%20222816.png)
+![](/assets/螢幕擷取畫面%202022-03-23%20222605_s70w3d6hc.png)
+![](/assets/螢幕擷取畫面%202022-03-23%20222816.png)
 
 6. 在OpenVINO使用推理引擎 ->測試
 
@@ -91,8 +91,8 @@ python "C:\Program Files (x86)\Intel\openvino_2021.4.582\deployment_tools\model_
 python pythondemo\2021.3\object_detection_demo_yolov3_async.py -i cam -m frozen_darknet_yolov4_model.xml  -d CPU
 ```
 
-![螢幕擷取畫面 2022-03-23 225915](/assets/螢幕擷取畫面%202022-03-23%20225915.png)
-![螢幕擷取畫面 2022-03-23 224648](/assets/螢幕擷取畫面%202022-03-23%20224648.png)
+![](/assets/螢幕擷取畫面%202022-03-23%20225915.png)
+![](/assets/螢幕擷取畫面%202022-03-23%20224648.png)
 
 
 ### yolo v3 tiny tf vs yolo v4 tiny tf
