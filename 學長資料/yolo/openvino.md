@@ -56,7 +56,7 @@
 
 ### yolo v3  vs yolo v4
 #### 網路架構
-|      |v3 tiny|v4tiny |改進原因|
+|      |v3 tiny|v4 tiny |改進原因|
 |------|-------|-------|-------|
 |Backbone         |	Darknet53|CSPDarknet53|參數減少->減少運算量並提高準確率|
 |Neck             | FPN   | PANet + SPP  |提升局部特徵和全域特徵的融合，進而豐富最終特徵圖的表達能力|
