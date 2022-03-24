@@ -67,6 +67,7 @@
 |Normalization|Batch Normalization (BN)|Cross mini-Batch Normalization (CmBN)|更好適用於小的 batch size 上|
 |Attention Module|None|Spatial Attention Module (SAM)|增加注意力機制，使得不會因為網路的加深而忘記前面的訊息|
 |Loss function trick|None|Class label smoothing, Grid Sensitivity|解決在 Grid 邊緣時較難偵測到的問題|
+
 ![](assets/markdown-img-paste-20220315111558831.png)
 
 ---
