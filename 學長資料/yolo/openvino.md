@@ -73,8 +73,8 @@
 ---
 ### OpenVINO預訓練模型工具包
 #### 規格
-|      |v3 tiny|v4tiny |
-|------|-------|-------|
+|      |v3 tiny|v4 tiny |
+|------|-------|--------|
 |TYPE             |Detection| Detection|
 |GFLOPS           | 5.582   | 6.9289   |
 |MParams          | 8.848   | 6.0535   |
